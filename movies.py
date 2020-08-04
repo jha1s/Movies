@@ -6,7 +6,7 @@ URL = 'https://movie.naver.com/movie/running/current.nhn'
 response = requests.get(URL)
 soup = BeautifulSoup(response.text, 'html.parser')
 
-movies_section = soup.select('#content > div.article > div:nth-child(1) > div.lst_wrap > ul > li')
+movies_section = soup.select('#content > .article > .obj_section > .lst_wrap > ul > li')
 
 movie_list = []
 
